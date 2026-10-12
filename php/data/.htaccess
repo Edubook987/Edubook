@@ -1,0 +1,5 @@
+# Deny direct web access to the SQLite database file itself (defense in
+# depth for Apache; PHP's built-in dev server and most other setups don't
+# serve this folder as static files in the first place, but this makes sure
+# a misconfigured Apache vhost can't hand out edubook.sqlite as a download).
+Require all denied
